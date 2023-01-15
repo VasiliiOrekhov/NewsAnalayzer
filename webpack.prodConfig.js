@@ -1,6 +1,5 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 const __dirname = path.resolve();
@@ -54,7 +53,6 @@ const config = {
     new HtmlWebpackPlugin({ template: './index.html' }),
     new MiniCssExtractPlugin({ filename: '[name].[hash].css' }),
   ],
-
 };
 
 export default config;

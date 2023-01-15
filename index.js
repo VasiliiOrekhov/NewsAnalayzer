@@ -1,3 +1,4 @@
+
 import './style/style.scss';
 
 function component(text) {

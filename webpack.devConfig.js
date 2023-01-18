@@ -1,6 +1,7 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
+import Swiper from 'swiper';
 
 const __dirname = path.resolve();
 
@@ -29,10 +30,8 @@ const config = {
         },
       },
       {
-
-        test: /\.(sa|sc|c)ss$/i,
+        test: /\.(scss)$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
-
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -48,7 +47,9 @@ const config = {
     extensions: ['.js'],
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './index.html' }),
+    new HtmlWebpackPlugin({ filename: 'index.html', template: './index.html' }),
+    new HtmlWebpackPlugin({ filename: 'about.html', template: './about.html' }),
+    new HtmlWebpackPlugin({ filename: 'analytics.html', template: './analytics.html' }),
     new webpack.HotModuleReplacementPlugin(),
   ],
 };

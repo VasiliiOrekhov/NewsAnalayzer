@@ -1,0 +1,458 @@
+@import url(./normalize.scss);
+@import url(../fonts-frontend/fonts.scss);
+
+body {
+  margin: 0 calc((100% - 1440px) / 2) 0;
+  @media (max-width: 1439px) {
+    margin: 0;
+  }
+  .header_top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #b6bcbf;
+    height: 80px;
+    box-sizing: border-box;
+    @media (max-width: 1439px) {
+      height: 64px;
+    }
+    @media (max-width: 767px) {
+      height: 56px;
+    }
+
+    .header_logo {
+      margin: 0;
+      padding-top: 30px;
+      padding-left: 104px;
+      font-family: 'robotoslab-regular';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      color: #1a1b22;
+      @media (max-width: 1439px) {
+        padding-top: 22px;
+        padding-left: 40px;
+      }
+      @media (max-width: 767px) {
+        padding-top: 16px;
+        padding-left: 16px;
+        font-size: 16px;
+      }
+    }
+
+    .header_menu {
+      padding-top: 30px;
+      padding-right: 101px;
+      display: flex;
+      text-decoration: none;
+      gap: 34px;
+
+      @media (max-width: 1439px) {
+        padding-top: 22px;
+        padding-right: 42px;
+      }
+      @media (max-width: 767px) {
+        padding-top: 16px;
+        padding-right: 16px;
+        gap: 11px;
+      }
+
+      .header_menu_link {
+        color: #b6bcbf;
+        text-decoration: none;
+        list-style: none;
+        font-family: 'roboto-medium';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+
+        @media (max-width: 767px) {
+          font-size: 16px;
+        }
+      }
+      .header_menu_link:last-child {
+        color: #1a1b22;
+        border-bottom: 3px solid #1a1b22;
+      }
+    }
+  }
+  .for-customers {
+    width: 100%;
+    padding: 80px 0 94px 104px;
+    box-sizing: border-box;
+
+    @media (max-width: 1439px) {
+      padding: 30px 40px 50px;
+    }
+    @media (max-width: 767px) {
+      padding: 16px 16px 35px;
+    }
+
+    .for-customers_title {
+      margin: 0;
+      font-family: 'robotoslab-regular';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 46px;
+      @media (max-width: 1439px) {
+        font-size: 30px;
+        line-height: 34px;
+      }
+      @media (max-width: 767px) {
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+    .for-customers_subtitle {
+      max-width: 815px;
+      margin: 24px 0 0;
+      font-family: 'roboto-regular';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      @media (max-width: 1439px) {
+        max-width: 688px;
+        margin: 16px 0 0;
+      }
+      @media (max-width: 767px) {
+        margin: 16px 0 0;
+      }
+    }
+  }
+  .technologies {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @media (max-width: 1439px) {
+      display: block;
+    }
+    .technologies_title {
+      margin: 80px 0 0 104px;
+      font-family: 'robotoslab-regular';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 46px;
+      @media (max-width: 1439px) {
+        margin: 40px 0 0 calc((100% - 768px) / 2 + 40px);
+        font-size: 30px;
+        line-height: 34px;
+        text-align: start;
+      }
+      @media (max-width: 767px) {
+        margin: 32px 0 0 calc((100% - 320px) / 2 + 16px);
+        line-height: 40px;
+      }
+    }
+    .technologies_grid {
+      margin: 93px 216px 88px 0;
+      display: grid;
+      grid-template-columns: repeat(4, 120px);
+      grid-column-gap: 41px;
+      @media (max-width: 1439px) {
+        grid-column-gap: 60px;
+        margin: 40px calc((100% - 768px) / 2 + 40px) 40px;
+      }
+      @media (max-width: 767px) {
+        margin: 39px calc((100% - 320px) / 2 + 16px) 38px;
+        grid-template-columns: repeat(2, 120px);
+        grid-column-gap: 33px;
+        grid-row-gap: 32px;
+      }
+
+      .technology {
+        .technology-title {
+          margin: 0;
+          font-family: 'roboto-regular';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 24px;
+          text-align: center;
+          letter-spacing: 0.2px;
+          color: #1a1b22;
+        }
+        .technology-image {
+          width: 120px;
+          height: 120px;
+        }
+      }
+    }
+  }
+  .about-author {
+    display: flex;
+    background-color: white;
+    @media (max-width: 767px) {
+      display: block;
+      padding-bottom: 32px;
+    }
+
+    .about-author_image {
+      margin: 80px 0 80px 104px;
+      width: 464px;
+      height: 464px;
+      @media (max-width: 1439px) {
+        margin: 61px 0 61px calc((100% - 768px) / 2 + 40px);
+        width: 232px;
+        height: 232px;
+      }
+      @media (max-width: 767px) {
+        margin: 32px 0 0 calc((100% - 272px) / 2);
+        width: 272px;
+        height: 272px;
+      }
+    }
+    .about-author_description {
+      margin: 131px 0 0 56px;
+      @media (max-width: 1439px) {
+        margin: 40px 0 0 32px;
+      }
+      @media (max-width: 767px) {
+        margin: 24px calc((100% - 288px) / 2) 0;
+      }
+
+      .about-author_title {
+        font-family: 'robotoslab-regular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 46px;
+        margin: 0;
+        @media (max-width: 1439px) {
+          font-size: 30px;
+          line-height: 40px;
+        }
+      }
+
+      .about-author_text {
+        max-width: 600px;
+        margin: 24px 0 0;
+        font-family: 'roboto-regular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        @media (max-width: 1439px) {
+          margin: 16px 0 0;
+          max-width: 424px;
+        }
+        @media (max-width: 767px) {
+          max-width: 288px;
+        }
+      }
+    }
+  }
+  .github-commits {
+    background-color: #f5f6f7;
+    .github-commits_top {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 64px;
+      @media (max-width: 1439px) {
+        margin: 0 0 32px;
+      }
+      @media (max-width: 767px) {
+        margin: 0 0 16px;
+      }
+      .github-commits_title {
+        margin: 72px 0 0 104px;
+        font-family: 'robotoslab-regular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 46px;
+        color: #1a1b22;
+        @media (max-width: 1439px) {
+          margin: 40px 0 0 40px;
+          font-size: 30px;
+          line-height: 34px;
+          max-width: 336px;
+        }
+        @media (max-width: 767px) {
+          margin: 32px 16px 16px;
+          line-height: 40px;
+        }
+      }
+      .github-commits_link {
+        margin: 85px 110px 0 0;
+        text-decoration: none;
+        list-style: none;
+        font-family: 'roboto-medium';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: #1a1b22;
+        @media (max-width: 1439px) {
+          margin: 48px 47px 0 0;
+        }
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
+    }
+
+    .swiper {
+      margin: 0 0 80px;
+      .swiper-wrapper {
+        .swiper-slide {
+          background-color: #ffffff;
+          border-radius: 16px;
+          width: 400px;
+          height: 288px;
+          padding-top: 24px;
+          .swiper-slide_date {
+            margin: 0 0 16px 24px;
+            font-family: 'roboto-regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            color: #b6bcbf;
+          }
+          .swiper-slide_profile {
+            margin: 0 0 0 24px;
+            display: flex;
+            gap: 16px;
+            .swiper-slide_image {
+              height: 64px;
+              width: 64px;
+              border-radius: 50%;
+            }
+            .swiper-slide_profile-info {
+              padding-top: 4px;
+              .swiper-slide_profile-name {
+                font-family: 'robotoslab-regular';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 26px;
+                line-height: 30px;
+                color: #1a1b22;
+                margin: 0;
+              }
+              .swiper-slide_profile-email {
+                margin: 2px 0 0;
+                font-family: 'roboto-regular';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+                color: #1a1b22;
+              }
+            }
+          }
+          .swiper-slide_text {
+            margin: 16px 24px 0;
+            font-family: 'roboto-regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #1a1b22;
+          }
+        }
+      }
+    }
+
+    .github-commits_link-button {
+      display: none;
+      @media (max-width: 767px) {
+        display: block;
+        width: 288px;
+        height: 56px;
+        background-color: #ffffff;
+        border-radius: 80px;
+        border: 1px solid #1a1b22;
+        margin: 24px calc((100% - 288px) / 2) 32px;
+        font-family: 'roboto-medium';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: #1a1b22;
+        cursor: pointer;
+      }
+    }
+  }
+  .footer {
+    height: 104px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    @media (max-width: 1439px) {
+      height: 64px;
+    }
+    @media (max-width: 767px) {
+      height: auto;
+      padding-bottom: 60px;
+    }
+    .footer_age {
+      margin: 33px 0 0 104px;
+      font-family: 'roboto-regular';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: #b6bcbf;
+      @media (max-width: 1439px) {
+        margin: 24px 0 0 40px;
+      }
+      @media (max-width: 767px) {
+        position: absolute;
+        margin: 180px 0 0 16px;
+      }
+    }
+    .footer_links {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+
+      @media (max-width: 1439px) {
+        gap: 25px;
+      }
+      @media (max-width: 767px) {
+        margin-left: 16px;
+        flex-direction: column;
+        padding-top: 28px;
+      }
+
+      .footer_link {
+        margin-top: 30px;
+        font-family: 'roboto-regular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        color: #1a1b22;
+        text-decoration: none;
+        list-style: none;
+        @media (max-width: 1439px) {
+          margin-top: 21px;
+        }
+        @media (max-width: 767px) {
+          margin-top: 0;
+          font-size: 16px;
+        }
+      }
+    }
+    .footer_imgs {
+      margin: 28px 104px 0 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      @media (max-width: 1439px) {
+        margin: 20px 40px 0 0;
+      }
+      @media (max-width: 767px) {
+        margin: 20px 20px 0 0;
+      }
+      .footer_img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}

@@ -28,12 +28,12 @@ const config = {
         },
       },
       {
-        test: /\.(sa|sc|c)ss$/i,
+        test: /\.(scss)$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(css)$/,
-        use: [MiniCssExtractPlugin.loader],
+        test: /\.(scss)$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,

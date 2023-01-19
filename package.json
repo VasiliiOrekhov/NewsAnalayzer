@@ -2,11 +2,11 @@
   "name": "newsanalayzer",
   "type": "module",
   "version": "1.0.0",
-  "description": "",
+  "description": "**О проекте:** News Analayser - сервис для анализа происходящих в мире событий.  \r **Функционал:** поиск по ключевым словам новостей на последнюю неделю и добавление карточек с новостямию Поиск и визуализация",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --config ./webpack.devConfig.js",
-    "build": "webpack --config ./webpack.prodConfig.js",
+    "dev": "webpack serve --config ./webpack/development.js",
+    "build": "webpack --config ./webpack/production.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

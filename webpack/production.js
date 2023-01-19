@@ -5,9 +5,9 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 const __dirname = path.resolve();
 
 const config = {
-  mode: 'development',
+  mode: 'production',
   devtool: 'inline-source-map',
-  entry: './index.js',
+  entry: './js/index.js',
   output: {
     path: path.resolve(__dirname, './build'),
     filename: '[name].[contenthash].js',
@@ -29,18 +29,15 @@ const config = {
       },
       {
         test: /\.(scss)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
-      {
-        test: /\.(scss)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
-      },
+
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
       {
-        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+        test: /\.(woff(2)?|eot|ttf|otf|)$/,
         type: 'asset/inline',
       },
     ],
@@ -50,8 +47,10 @@ const config = {
   },
 
   plugins: [
-    new HtmlWebpackPlugin({ template: './index.html' }),
-    new MiniCssExtractPlugin({ filename: '[name].[hash].css' }),
+    new HtmlWebpackPlugin({ filename: 'index.html', template: './pages/index.html' }),
+    new HtmlWebpackPlugin({ filename: 'about.html', template: './pages/about.html' }),
+    new HtmlWebpackPlugin({ filename: 'analytics.html', template: './pages/analytics.html' }),
+    new MiniCssExtractPlugin({ filename: '[name].[hash].scss' }),
   ],
 };
 

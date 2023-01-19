@@ -1,20 +1,22 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import webpack from 'webpack';
+import Swiper from 'swiper';
 
 const __dirname = path.resolve();
 
 const config = {
   mode: 'development',
   devtool: 'inline-source-map',
-  entry: './index.js',
-  output: {
-    path: path.resolve(__dirname, './build'),
-    filename: '[name].[contenthash].js',
-    assetModuleFilename: './images/[name].[hash][ext][query]',
-
-    clean: true,
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'public'),
+    },
+    historyApiFallback: true,
+    port: 3000,
+    open: true,
   },
+  entry: './js/index.js',
   module: {
     rules: [
       {
@@ -28,12 +30,8 @@ const config = {
         },
       },
       {
-        test: /\.(sa|sc|c)ss$/i,
+        test: /\.(scss)$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
-      },
-      {
-        test: /\.(css)$/,
-        use: [MiniCssExtractPlugin.loader],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -48,10 +46,12 @@ const config = {
   resolve: {
     extensions: ['.js'],
   },
-
   plugins: [
-    new HtmlWebpackPlugin({ template: './index.html' }),
-    new MiniCssExtractPlugin({ filename: '[name].[hash].css' }),
+    new HtmlWebpackPlugin({ filename: 'index.html', template: './pages/index.html' }),
+    new HtmlWebpackPlugin({ filename: 'about.html', template: './pages/about.html' }),
+    new HtmlWebpackPlugin({ filename: 'analytics.html', template: './pages/analytics.html' }),
+
+    new webpack.HotModuleReplacementPlugin(),
   ],
 };
 

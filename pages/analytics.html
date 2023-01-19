@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Василий Орехов" />
+    <meta name="description" content="Сервис для анализа происходящих в мире событий." />
+    <title>News Analayzer</title>
+  </head>
+  <body>
+    <header class="header-analytics_top">
+      <h3 class="header_logo">NewsAnalyzer</h3>
+      <div class="header_menu">
+        <a class="header_menu_link" href="./index.html">Главная</a>
+        <a class="header_menu_link" href="./about.html">О проекте</a>
+      </div>
+    </header>
+    <section class="header-analytics_bottom">
+      <h3 class="header-analytics_title">Главная <span>/ Аналитика</span></h3>
+      <h3 class="header-analytics_request">Вы спросили: «Путешествия»</h3>
+      <h4 class="header-analytics_result">Новостей за неделю: <b>34 324</b></h4>
+      <h4 class="header-analytics_result">Упоминаний в загаловках: <b>324</b></h4>
+    </section>
+
+    <section class="analytics_schedule">
+      <h3 class="analytics_title">Аналитика по дням</h3>
+      <div class="analytics_table-titles">
+        <h4 class="analytics_table-title">Дата<br />(август)</h4>
+        <h4 class="analytics_table-title">Кол-во упоминаний</h4>
+      </div>
+      <div class="analytics_line"></div>
+      <div class="analytics_scale">
+        <span>0</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+      <div class="analytics_bottom-grid">
+        <h3 class="analytics_day">19, пн</h3>
+        <div style="width: 150px" class="analytics_day-number">15</div>
+        <h3 class="analytics_day">20, вт</h3>
+        <div style="width: 120px" class="analytics_day-number">14</div>
+        <h3 class="analytics_day">21, ср</h3>
+        <div style="width: 180px" class="analytics_day-number">14</div>
+        <h3 class="analytics_day">22, чт</h3>
+        <div style="width: 230px" class="analytics_day-number">14</div>
+        <h3 class="analytics_day">23, пт</h3>
+        <div style="width: 350px" class="analytics_day-number">14</div>
+        <h3 class="analytics_day">24, сб</h3>
+        <div style="width: 80px" class="analytics_day-number">14</div>
+        <h3 class="analytics_day">25, вс</h3>
+        <div style="width: 560px" class="analytics_day-number">14</div>
+      </div>
+      <div class="analytics_scale">
+        <span>0</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </section>
+    <footer class="footer">
+      <h4 class="footer_age">© 2023 Supersite</h4>
+      <div class="footer_links">
+        <a class="footer_link" href="./index.html">Главная</a>
+        <a class="footer_link" href="./about.html">О проекте</a>
+        <a class="footer_link" href="https://practicum.yandex.ru/">Яндекс.Практикум</a>
+      </div>
+      <div class="footer_imgs">
+        <a href="https://practicum.yandex.ru/"
+          ><img src="<%=require('../images/github.png')%>" alt="footer-image" class="footer_img"
+        /></a>
+        <a href="https://www.facebook.com/"
+          ><img src="<%=require('../images/fb.png')%>" alt="footer-image" class="footer_img"
+        /></a>
+      </div>
+    </footer>
+  </body>
+</html>

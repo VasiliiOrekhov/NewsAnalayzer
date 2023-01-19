@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Василий Орехов" />
+    <meta name="description" content="Сервис для анализа происходящих в мире событий." />
+    <title>News Analayzer</title>
+  </head>
+  <body>
+    <div class="header_top">
+      <h3 class="header_logo">NewsAnalyzer</h3>
+      <div class="header_menu">
+        <a class="header_menu_link" href="./index.html">Главная</a>
+        <a class="header_menu_link" href="./about.html">О проекте</a>
+      </div>
+    </div>
+    <section class="for-customers">
+      <h3 class="for-customers_title">Клиентам</h3>
+      <h4 class="for-customers_subtitle">
+        Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился
+        студент, какими технологиями владеет.<br /><br />Вёрстка сайта выполнена по методологии БЭМ.
+        Это делает сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и
+        функциональность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также
+        сайт проще и дешевле поддерживать.<br /><br />Карточки с новостями приходят с сервера и
+        обрабатываются асинхронно. То есть сайт продолжает работать, пока от сервера приходит ответ.
+        Это повышает удобство использования сервиса.<br /><br />При создании проекта была
+        использована сборка технологией Webpack. Это современный подход к разработке сайтов. Код
+        оптимизируется, а значит, сайт работает быстрее. Также сайт работает в старых браузерах.
+        Даже если посетители — пользователи старых операционных систем, у них не будет проблем с
+        отображением. А значит, потенциальная аудитория возрастает.<br /><br />Проект был проверен
+        экспертами Яндекс.Практикума. Если вашему бизнесу нужен сайт, мы рекомендуем обратиться к
+        этому студенту.
+      </h4>
+    </section>
+    <section class="technologies">
+      <h3 class="technologies_title">Используемые<br />технологии</h3>
+      <div class="technologies_grid">
+        <div class="technology">
+          <h4 class="technology-title">HTML</h4>
+          <img
+            src="<%=require('../images/html.png')%>"
+            alt="technology-image"
+            class="technology-img"
+          />
+        </div>
+        <div class="technology">
+          <h4 class="technology-title">CSS</h4>
+          <img
+            src="<%=require('../images/css.png')%>"
+            alt="technology-image"
+            class="technology-img"
+          />
+        </div>
+        <div class="technology">
+          <h4 class="technology-title">Java Script</h4>
+          <img
+            src="<%=require('../images/js.png')%>"
+            alt="technology-image"
+            class="technology-img"
+          />
+        </div>
+        <div class="technology">
+          <h4 class="technology-title">Webpack</h4>
+          <img
+            src="<%=require('../images/webpack.png')%>"
+            alt="technology-image"
+            class="technology-img"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="about-author">
+      <img
+        src="<%=require('../images/author image-03.png')%>"
+        alt="author-image"
+        class="about-author_image"
+      />
+      <div class="about-author_description">
+        <h3 class="about-author_title">Об авторе</h3>
+        <h4 class="about-author_text">
+          Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы
+          занимаетесь, какими технологиями разработки владеете.<br />Также можно рассказать о
+          процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным
+          заказчикам. Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с
+          вами связаться.
+        </h4>
+      </div>
+    </section>
+    <section class="github-commits">
+      <div class="github-commits_top">
+        <h3 class="github-commits_title">История коммитов из GitHub</h3>
+        <a class="github-commits_link" href="">Открыть в Github&nbsp;&nbsp;&#10095;</a>
+      </div>
+
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <h3 class="swiper-slide_date">14 августа, 2019</h3>
+            <div class="swiper-slide_profile">
+              <img
+                src="<%=require('../images/author image-03.png')%>"
+                alt="author-image"
+                class="swiper-slide_image"
+              />
+              <div class="swiper-slide_profile-info">
+                <h3 class="swiper-slide_profile-name">Антон Долинин</h3>
+                <h3 class="swiper-slide_profile-email">anton@yandex.ru</h3>
+              </div>
+            </div>
+            <h4 class="swiper-slide_text">
+              Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve
+              your HTML & CSS workflow.
+            </h4>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+
+      <button class="github-commits_link-button" onclick="window.open('https://github.com/')">
+        Открыть в GitHub
+      </button>
+    </section>
+    <footer class="footer">
+      <h4 class="footer_age">© 2023 Supersite</h4>
+      <div class="footer_links">
+        <a class="footer_link" href="./index.html">Главная</a>
+        <a class="footer_link" href="./about.html">О проекте</a>
+        <a class="footer_link" href="https://practicum.yandex.ru/" target="_blank"
+          >Яндекс.Практикум</a
+        >
+      </div>
+      <div class="footer_imgs">
+        <a href="https://practicum.yandex.ru/" target="_blank"
+          ><img src="<%=require('../images/github.png')%>" alt="footer-image" class="footer_img"
+        /></a>
+        <a href="https://www.facebook.com/" target="_blank"
+          ><img src="<%=require('../images/fb.png')%>" alt="footer-image" class="footer_img"
+        /></a>
+      </div>
+    </footer>
+  </body>
+</html>

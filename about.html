@@ -128,10 +128,7 @@
         <div class="swiper-scrollbar"></div>
       </div>
 
-      <button
-        class="github-commits_link-button"
-        onclick="window.location.href='https://github.com/';"
-      >
+      <button class="github-commits_link-button" onclick="window.open('https://github.com/')">
         Открыть в GitHub
       </button>
     </section>
@@ -140,13 +137,15 @@
       <div class="footer_links">
         <a class="footer_link" href="./index.html">Главная</a>
         <a class="footer_link" href="./about.html">О проекте</a>
-        <a class="footer_link" href="https://practicum.yandex.ru/">Яндекс.Практикум</a>
+        <a class="footer_link" href="https://practicum.yandex.ru/" target="_blank"
+          >Яндекс.Практикум</a
+        >
       </div>
       <div class="footer_imgs">
-        <a href="https://practicum.yandex.ru/"
+        <a href="https://practicum.yandex.ru/" target="_blank"
           ><img src="<%=require('./images/github.png')%>" alt="footer-image" class="footer_img"
         /></a>
-        <a href="https://www.facebook.com/"
+        <a href="https://www.facebook.com/" target="_blank"
           ><img src="<%=require('./images/fb.png')%>" alt="footer-image" class="footer_img"
         /></a>
       </div>

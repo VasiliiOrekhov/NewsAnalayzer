@@ -247,6 +247,9 @@ body {
   }
   .github-commits {
     background-color: #f5f6f7;
+    @media (max-width: 767px) {
+      padding: 0 0 32px;
+    }
     .github-commits_top {
       display: flex;
       justify-content: space-between;
@@ -366,7 +369,7 @@ body {
         background-color: #ffffff;
         border-radius: 80px;
         border: 1px solid #1a1b22;
-        margin: 24px calc((100% - 288px) / 2) 32px;
+        margin: 24px calc((100% - 288px) / 2) 0;
         font-family: 'roboto-medium';
         font-style: normal;
         font-weight: 500;

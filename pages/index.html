@@ -23,20 +23,21 @@
           Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
           прошедшую неделю.
         </h4>
-        <div class="input-flex">
+        <form class="form-flex">
           <input
             type="text"
             name=""
             class="header_input"
             placeholder="Введите тему новости"
+            minlength="1"
             required
           />
-          <!-- <div class="header_input-error"></div> -->
           <button class="header_find-button">Искать</button>
-        </div>
+        </form>
+        <div class="header_input-error"></div>
       </div>
     </div>
-    <!-- <section class="find-result">
+    <section class="find-result_noresult find-result_close">
       <img
         src="<%=require('../images/not-found_v1.png')%>"
         alt="no result image"
@@ -47,91 +48,18 @@
         К сожалению по вашему запросу<br />ничего не найдено.
       </h4>
     </section>
-    <section class="find-result">
+    <section class="find-result_loading find-result_close">
       <i class="circle-preloader"></i>
       <h4 class="find-result_load-subtitle">Идет поиск новостей...</h4>
-    </section> -->
-    <section class="find-result">
+    </section>
+    <section class="find-result_card-section find-result_close">
       <div class="find-result_header">
         <h3 class="find-result_title">Результаты поиска</h3>
         <a class="find-result_analitic-link" href="./analytics.html"
           >Посмотреть аналитику&nbsp;&nbsp;&#10095;</a
         >
       </div>
-      <div class="find-result_grid">
-        <!-- <div class="find-result_card">
-          <img
-            src="<%=require('../images/card-image_08.png')%>"
-            alt="card-image"
-            class="find-result_card-image"
-          />
-
-          <div class="find-result_card-description">
-            <h3 class="find-result_card-date">2 августа, 2019</h3>
-            <h3 class="find-result_card-title">Национальное достояние – парки</h3>
-            <h4 class="find-result_card-text">
-              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-              система национальных парков – охраняемых территорий, где и сегодня каждый может
-              приобщиться к природе.
-            </h4>
-            <h3 class="find-result_card-media">Лента.ру</h3>
-          </div>
-        </div> -->
-        <div class="find-result_card">
-          <img
-            src="<%=require('../images/card-image_08.png')%>"
-            alt="card-image"
-            class="find-result_card-image"
-          />
-
-          <div class="find-result_card-description">
-            <h3 class="find-result_card-date">2 августа, 2019</h3>
-            <h3 class="find-result_card-title">Национальное достояние – парки</h3>
-            <h4 class="find-result_card-text">
-              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-              система национальных парков – охраняемых территорий, где и сегодня каждый может
-              приобщиться к природе.
-            </h4>
-            <h3 class="find-result_card-media">Лента.ру</h3>
-          </div>
-        </div>
-        <div class="find-result_card">
-          <img
-            src="<%=require('../images/card-image_08.png')%>"
-            alt="card-image"
-            class="find-result_card-image"
-          />
-
-          <div class="find-result_card-description">
-            <h3 class="find-result_card-date">2 августа, 2019</h3>
-            <h3 class="find-result_card-title">Национальное достояние – парки</h3>
-            <h4 class="find-result_card-text">
-              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-              система национальных парков – охраняемых территорий, где и сегодня каждый может
-              приобщиться к природе.
-            </h4>
-            <h3 class="find-result_card-media">Лента.ру</h3>
-          </div>
-        </div>
-        <div class="find-result_card">
-          <img
-            src="<%=require('../images/card-image_08.png')%>"
-            alt="card-image"
-            class="find-result_card-image"
-          />
-
-          <div class="find-result_card-description">
-            <h3 class="find-result_card-date">2 августа, 2019</h3>
-            <h3 class="find-result_card-title">Национальное достояние – парки</h3>
-            <h4 class="find-result_card-text">
-              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-              система национальных парков – охраняемых территорий, где и сегодня каждый может
-              приобщиться к природе.
-            </h4>
-            <h3 class="find-result_card-media">Лента.ру</h3>
-          </div>
-        </div>
-      </div>
+      <div class="find-result_grid"></div>
       <button class="find-result_show-more-button">Показать еще</button>
     </section>
     <section class="about-author">

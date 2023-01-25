@@ -50,7 +50,6 @@ const config = {
     new HtmlWebpackPlugin({ filename: 'index.html', template: './pages/index.html' }),
     new HtmlWebpackPlugin({ filename: 'about.html', template: './pages/about.html' }),
     new HtmlWebpackPlugin({ filename: 'analytics.html', template: './pages/analytics.html' }),
-
     new webpack.HotModuleReplacementPlugin(),
   ],
 };

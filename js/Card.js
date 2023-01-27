@@ -6,6 +6,7 @@ export class Card {
     this.source = source;
     this.urlToImage = urlToImage;
     this.urlCard = url;
+    this.card = null;
   }
   create() {
     const template = `
@@ -25,12 +26,11 @@ export class Card {
 
     const node = document.createRange().createContextualFragment(template);
     this.card = node.firstChild;
-    // this.listners();
+    this.listner();
     return node;
   }
 
   listner() {
-    // this.card.addEventListener
-    //добавить слушатель на карточку для открытия сайта
+    this.card.nextElementSibling.addEventListener('click', () => window.open(this.urlCard));
   }
 }

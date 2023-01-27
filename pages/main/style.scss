@@ -1,5 +1,5 @@
-@import url(./normalize.scss);
-@import url(./fonts.scss);
+@import url(../../style/normalize.scss);
+@import url(../../style/fonts.scss);
 
 body {
   background-color: #f5f6f7;
@@ -10,7 +10,7 @@ body {
   }
 
   .header {
-    background-image: url(../images/georgia-de-lotz--UsJoNxLaNo-unsplash.png);
+    background-image: url(../../images/georgia-de-lotz--UsJoNxLaNo-unsplash.png);
     height: 576px;
     @media (max-width: 1439px) {
       height: 400px;

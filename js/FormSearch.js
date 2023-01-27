@@ -12,6 +12,7 @@ export class FormSearch {
   find(event) {
     event.preventDefault();
     const value = this.input.value;
+    localStorage.setItem('request', value);
     value.length > 0 ? this.searchNewsCallback(value) : this.formValidator.checkInputValidity();
   }
   listners() {

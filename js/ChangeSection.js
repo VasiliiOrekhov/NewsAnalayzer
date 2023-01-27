@@ -14,10 +14,10 @@ class ChangeSection {
     this.findResultCard.classList.add('find-result_close');
   }
   addNoResult() {
-    this.findResultNoResult.classList.remove('find-result_noresult');
+    this.findResultNoResult.classList.remove('find-result_close');
   }
   removeNoResult() {
-    this.findResultNoResult.classList.add('find-result_noresult');
+    this.findResultNoResult.classList.add('find-result_close');
   }
 }
 export const changeSection = new ChangeSection();

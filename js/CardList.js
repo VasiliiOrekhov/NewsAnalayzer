@@ -89,7 +89,6 @@ export class CardList {
     localStorage.setItem('titleCounter', titleCounter);
     localStorage.setItem('titleAndTextCounterOfDay', titleAndTextCounterOfDay);
   }
-  counter() {}
 
   listners() {
     this.moreButton.addEventListener('click', this.showMore.bind(this));

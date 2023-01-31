@@ -384,92 +384,111 @@ body {
         margin: 36px calc((100% - 288px) / 2) 0;
         grid-template-columns: repeat(1, 288px);
       }
+      .find-result_card-link {
+        text-decoration: none;
+        list-style: none;
 
-      .find-result_card {
-        width: 100%;
-        border-radius: 15px;
-        overflow: hidden;
-        background-color: white;
-
-        .find-result_card-image {
+        .find-result_card {
           width: 100%;
-          height: 272px;
+          height: 578px;
+          border-radius: 15px;
+          overflow: hidden;
+          background-color: white;
+          box-sizing: border-box;
           @media (max-width: 1439px) {
-            height: 150px;
+            height: 430px;
           }
           @media (max-width: 767px) {
-            height: 196px;
-          }
-        }
-        .find-result_card-description {
-          padding: 15px 24px 24px;
-          @media (max-width: 1439px) {
-            padding: 13px 16px 16px;
-          }
-          @media (max-width: 767px) {
-            padding: 13px 16px 18px;
+            height: 446px;
           }
 
-          .find-result_card-date {
-            margin: 0;
-            font-family: 'sourcesanspro-regular';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 24px;
-            color: #b6bcbf;
-          }
-
-          .find-result_card-title {
-            margin: 12px 0 0;
-            font-family: 'robotoslab-regular';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 26px;
-            line-height: 30px;
-            color: #1a1b22;
+          .find-result_card-image {
+            width: 100%;
+            height: 272px;
             @media (max-width: 1439px) {
-              font-size: 22px;
-              line-height: 24px;
+              height: 150px;
             }
             @media (max-width: 767px) {
-              margin: 16px 0 0;
-              font-size: 22px;
-              line-height: 26px;
+              height: 196px;
             }
           }
-          .find-result_card-text {
-            margin: 16px 0 0;
-            font-family: 'roboto-regular';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 22px;
-            color: #1a1b22;
+          .find-result_card-description {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+
+            justify-content: space-between;
+            height: calc(100% - 272px);
+            padding: 15px 24px 24px;
             @media (max-width: 1439px) {
-              margin: 10px 0 0;
+              padding: 13px 16px 16px;
+              height: calc(100% - 150px);
+            }
+            @media (max-width: 767px) {
+              padding: 13px 16px 18px;
+              height: calc(100% - 196px);
+            }
+
+            .find-result_card-date {
+              margin: 0;
+              font-family: 'sourcesanspro-regular';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 24px;
+              color: #b6bcbf;
+            }
+
+            .find-result_card-title {
+              margin: 12px 0 0;
+              font-family: 'robotoslab-regular';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 26px;
+              line-height: 30px;
+              color: #1a1b22;
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              @media (max-width: 1439px) {
+                font-size: 22px;
+                line-height: 24px;
+              }
+              @media (max-width: 767px) {
+                margin: 16px 0 0;
+                font-size: 22px;
+                line-height: 26px;
+                -webkit-line-clamp: 2;
+              }
+            }
+            .find-result_card-text {
+              margin: 16px 0 0;
+              font-family: 'roboto-regular';
+              font-style: normal;
+              font-weight: 400;
               font-size: 16px;
               line-height: 22px;
+              color: #1a1b22;
               display: -webkit-box;
               -webkit-line-clamp: 4;
               -webkit-box-orient: vertical;
               overflow: hidden;
+              @media (max-width: 1439px) {
+                margin: 10px 0 0;
+                font-size: 16px;
+                line-height: 22px;
+              }
             }
-          }
-          .find-result_card-media {
-            margin: 18px 0 0;
-            font-family: 'Roboto Slab';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 20px;
-            text-transform: uppercase;
-            color: #b6bcbf;
-            @media (max-width: 1439px) {
-              margin: 12px 0 0;
-            }
-            @media (max-width: 767px) {
-              margin: 5px 0 0;
+            .find-result_card-media {
+              margin: 0;
+              font-family: 'Roboto Slab';
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 20px;
+              text-transform: uppercase;
+              color: #b6bcbf;
             }
           }
         }

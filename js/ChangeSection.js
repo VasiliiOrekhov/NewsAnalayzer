@@ -10,13 +10,11 @@ class ChangeSection {
   addCard() {
     this.findResultCard.classList.remove('find-result_close');
   }
-  removeCard() {
-    this.findResultCard.classList.add('find-result_close');
-  }
   addNoResult() {
     this.findResultNoResult.classList.remove('find-result_close');
   }
-  removeNoResult() {
+  clearResult() {
+    this.findResultCard.classList.add('find-result_close');
     this.findResultNoResult.classList.add('find-result_close');
   }
 }

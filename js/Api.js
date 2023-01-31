@@ -1,13 +1,12 @@
-import { CommitList } from './CommitList.js';
-import { apiKey, xDayAgo, ghOwner, ghRepo } from './constants.js';
-const commitList = new CommitList();
+import { xDayAgo } from './utils.js';
+import { apiKey, ghOwner, ghRepo, newsUrl, ghRepoUrl } from './constants.js';
 
 class Api {
   constructor() {}
 
   async getCards(value) {
     const result = await fetch(
-      `https://newsapi.org/v2/everything?q=${value}&from=${xDayAgo(6)}&to=${xDayAgo(
+      `${newsUrl}?q=${value}&from=${xDayAgo(6)}&to=${xDayAgo(
         0
       )}&sortBy=popularity&pageSize=100&apiKey=${apiKey}`,
       {
@@ -17,9 +16,8 @@ class Api {
     return result;
   }
   async getCommits() {
-    const response = await fetch(`https://api.github.com/repos/${ghOwner}/${ghRepo}/commits`);
-    const result = await response.json();
-    commitList.init(result);
+    const response = await fetch(`${ghRepoUrl}/${ghOwner}/${ghRepo}/commits`);
+    return response;
   }
 }
 export const api = new Api();

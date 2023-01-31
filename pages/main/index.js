@@ -10,15 +10,13 @@ const cardList = new CardList();
 export const formValidator = new FormValidator();
 const searchNewsCallback = async (value) => {
   try {
-    changeSection.removeCard();
-    changeSection.removeNoResult();
+    changeSection.clearResult();
     changeSection.toggleLoading();
     const response = await api.getCards(value);
     const result = await response.json();
-    console.log(result);
     if (result.articles.length > 0) {
       changeSection.addCard();
-      cardList.init(result);
+      cardList.init(result.articles);
     } else {
       changeSection.addNoResult();
     }

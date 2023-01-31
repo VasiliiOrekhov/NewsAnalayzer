@@ -7,7 +7,7 @@ export class CommitCard {
   create() {
     const template = `
     <div class="swiper-slide">
-    <h3 class="swiper-slide_date">${this.commit.committer.date.substr(0, 10)}</h3>
+    <h3 class="swiper-slide_date">${this.commit.committer.date.substring(0, 10)}</h3>
     <div class="swiper-slide_profile">
       <img
         src=${this.author.avatar_url}

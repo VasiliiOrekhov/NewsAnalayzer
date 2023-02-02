@@ -40,7 +40,7 @@
         <div class="technology">
           <h4 class="technology-title">HTML</h4>
           <img
-            src="<%=require('../images/html.png')%>"
+            src="<%=require('../../images/html.png')%>"
             alt="technology-image"
             class="technology-img"
           />
@@ -48,7 +48,7 @@
         <div class="technology">
           <h4 class="technology-title">CSS</h4>
           <img
-            src="<%=require('../images/css.png')%>"
+            src="<%=require('../../images/css.png')%>"
             alt="technology-image"
             class="technology-img"
           />
@@ -56,7 +56,7 @@
         <div class="technology">
           <h4 class="technology-title">Java Script</h4>
           <img
-            src="<%=require('../images/js.png')%>"
+            src="<%=require('../../images/js.png')%>"
             alt="technology-image"
             class="technology-img"
           />
@@ -64,7 +64,7 @@
         <div class="technology">
           <h4 class="technology-title">Webpack</h4>
           <img
-            src="<%=require('../images/webpack.png')%>"
+            src="<%=require('../../images/webpack.png')%>"
             alt="technology-image"
             class="technology-img"
           />
@@ -73,7 +73,7 @@
     </section>
     <section class="about-author">
       <img
-        src="<%=require('../images/author image-03.png')%>"
+        src="<%=require('../../images/author image-03.png')%>"
         alt="author-image"
         class="about-author_image"
       />
@@ -91,31 +91,18 @@
     <section class="github-commits">
       <div class="github-commits_top">
         <h3 class="github-commits_title">История коммитов из GitHub</h3>
-        <a class="github-commits_link" href="">Открыть в Github&nbsp;&nbsp;&#10095;</a>
+        <a
+          class="github-commits_link"
+          href="https://github.com/VasiliiOrekhov/NewsAnalayzer"
+          target="_blank"
+          >Открыть в Github&nbsp;&nbsp;&#10095;</a
+        >
       </div>
 
       <div class="swiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
-          <div class="swiper-slide">
-            <h3 class="swiper-slide_date">14 августа, 2019</h3>
-            <div class="swiper-slide_profile">
-              <img
-                src="<%=require('../images/author image-03.png')%>"
-                alt="author-image"
-                class="swiper-slide_image"
-              />
-              <div class="swiper-slide_profile-info">
-                <h3 class="swiper-slide_profile-name">Антон Долинин</h3>
-                <h3 class="swiper-slide_profile-email">anton@yandex.ru</h3>
-              </div>
-            </div>
-            <h4 class="swiper-slide_text">
-              Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve
-              your HTML & CSS workflow.
-            </h4>
-          </div>
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
@@ -128,7 +115,10 @@
         <div class="swiper-scrollbar"></div>
       </div>
 
-      <button class="github-commits_link-button" onclick="window.open('https://github.com/')">
+      <button
+        class="github-commits_link-button"
+        onclick="window.open('https://github.com/VasiliiOrekhov/NewsAnalayzer')"
+      >
         Открыть в GitHub
       </button>
     </section>
@@ -142,11 +132,11 @@
         >
       </div>
       <div class="footer_imgs">
-        <a href="https://practicum.yandex.ru/" target="_blank"
-          ><img src="<%=require('../images/github.png')%>" alt="footer-image" class="footer_img"
+        <a href="https://github.com/" target="_blank"
+          ><img src="<%=require('../../images/github.png')%>" alt="footer-image" class="footer_img"
         /></a>
         <a href="https://www.facebook.com/" target="_blank"
-          ><img src="<%=require('../images/fb.png')%>" alt="footer-image" class="footer_img"
+          ><img src="<%=require('../../images/fb.png')%>" alt="footer-image" class="footer_img"
         /></a>
       </div>
     </footer>

@@ -18,47 +18,51 @@
     </header>
     <section class="header-analytics_bottom">
       <h3 class="header-analytics_title">Главная <span>/ Аналитика</span></h3>
-      <h3 class="header-analytics_request">Вы спросили: «Путешествия»</h3>
-      <h4 class="header-analytics_result">Новостей за неделю: <b>34 324</b></h4>
-      <h4 class="header-analytics_result">Упоминаний в загаловках: <b>324</b></h4>
+      <h3 class="header-analytics_request"></h3>
+      <h4 class="header-analytics_result">
+        Новостей за неделю: <b class="header-analytics_result-week"></b>
+      </h4>
+      <h4 class="header-analytics_result">
+        Упоминаний в загаловках: <b class="header-analytics_result-title"></b>
+      </h4>
     </section>
 
     <section class="analytics_schedule">
       <h3 class="analytics_title">Аналитика по дням</h3>
       <div class="analytics_table-titles">
-        <h4 class="analytics_table-title">Дата<br />(август)</h4>
+        <h4 class="analytics_table-title analytics_table-title-month"></h4>
         <h4 class="analytics_table-title">Кол-во упоминаний</h4>
       </div>
       <div class="analytics_line"></div>
       <div class="analytics_scale">
         <span>0</span>
-        <span>25</span>
-        <span>50</span>
-        <span>75</span>
-        <span>100</span>
+        <span>5</span>
+        <span>10</span>
+        <span>15</span>
+        <span>20</span>
       </div>
       <div class="analytics_bottom-grid">
-        <h3 class="analytics_day">19, пн</h3>
-        <div style="width: 150px" class="analytics_day-number">15</div>
-        <h3 class="analytics_day">20, вт</h3>
-        <div style="width: 120px" class="analytics_day-number">14</div>
-        <h3 class="analytics_day">21, ср</h3>
-        <div style="width: 180px" class="analytics_day-number">14</div>
-        <h3 class="analytics_day">22, чт</h3>
-        <div style="width: 230px" class="analytics_day-number">14</div>
-        <h3 class="analytics_day">23, пт</h3>
-        <div style="width: 350px" class="analytics_day-number">14</div>
-        <h3 class="analytics_day">24, сб</h3>
-        <div style="width: 80px" class="analytics_day-number">14</div>
-        <h3 class="analytics_day">25, вс</h3>
-        <div style="width: 560px" class="analytics_day-number">14</div>
+        <h3 class="analytics_day analytics_day-6ago"></h3>
+        <div class="analytics_day-number analytics_day-number-6ago"></div>
+        <h3 class="analytics_day analytics_day-5ago"></h3>
+        <div class="analytics_day-number analytics_day-number-5ago"></div>
+        <h3 class="analytics_day analytics_day-4ago"></h3>
+        <div class="analytics_day-number analytics_day-number-4ago"></div>
+        <h3 class="analytics_day analytics_day-3ago"></h3>
+        <div class="analytics_day-number analytics_day-number-3ago"></div>
+        <h3 class="analytics_day analytics_day-2ago"></h3>
+        <div class="analytics_day-number analytics_day-number-2ago"></div>
+        <h3 class="analytics_day analytics_day-1ago"></h3>
+        <div class="analytics_day-number analytics_day-number-1ago"></div>
+        <h3 class="analytics_day analytics_day-0ago"></h3>
+        <div style="width: 32px" class="analytics_day-number analytics_day-number-0ago"></div>
       </div>
       <div class="analytics_scale">
         <span>0</span>
-        <span>25</span>
-        <span>50</span>
-        <span>75</span>
-        <span>100</span>
+        <span>5</span>
+        <span>10</span>
+        <span>15</span>
+        <span>20</span>
       </div>
     </section>
     <footer class="footer">
@@ -69,11 +73,11 @@
         <a class="footer_link" href="https://practicum.yandex.ru/">Яндекс.Практикум</a>
       </div>
       <div class="footer_imgs">
-        <a href="https://practicum.yandex.ru/"
-          ><img src="<%=require('../images/github.png')%>" alt="footer-image" class="footer_img"
+        <a href="https://github.com/"
+          ><img src="<%=require('../../images/github.png')%>" alt="footer-image" class="footer_img"
         /></a>
         <a href="https://www.facebook.com/"
-          ><img src="<%=require('../images/fb.png')%>" alt="footer-image" class="footer_img"
+          ><img src="<%=require('../../images/fb.png')%>" alt="footer-image" class="footer_img"
         /></a>
       </div>
     </footer>

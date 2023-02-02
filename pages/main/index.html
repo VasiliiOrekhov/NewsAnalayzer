@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Василий Орехов" />
+    <meta name="description" content="Сервис для анализа происходящих в мире событий." />
+    <title>News Analayzer</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header_top">
+        <h3 class="header_logo">NewsAnalyzer</h3>
+        <div class="header_menu">
+          <a class="header_menu_link" href="./index.html">Главная</a>
+          <a class="header_menu_link" href="./about.html">О проекте</a>
+        </div>
+      </div>
+      <div class="header_bottom">
+        <h3 class="header_what">Что в мире творится?</h3>
+        <h4 class="header_description">
+          Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
+          прошедшую неделю.
+        </h4>
+        <form class="form-flex">
+          <input
+            type="text"
+            name=""
+            class="header_input"
+            placeholder="Введите тему новости"
+            minlength="1"
+            required
+          />
+          <button class="header_find-button">Искать</button>
+        </form>
+        <div class="header_input-error"></div>
+      </div>
+    </div>
+    <section class="find-result_noresult find-result_close">
+      <img
+        src="<%=require('../../images/not-found_v1.png')%>"
+        alt="no result image"
+        class="find-result_not-found"
+      />
+      <h3 class="find-result_load-title">Ничего не найдено</h3>
+      <h4 class="find-result_load-subtitle">
+        К сожалению по вашему запросу<br />ничего не найдено.
+      </h4>
+    </section>
+    <section class="find-result_loading find-result_close">
+      <i class="circle-preloader"></i>
+      <h4 class="find-result_load-subtitle">Идет поиск новостей...</h4>
+    </section>
+    <section class="find-result_card-section find-result_close">
+      <div class="find-result_header">
+        <h3 class="find-result_title">Результаты поиска</h3>
+        <a class="find-result_analitic-link" href="./analytics.html"
+          >Посмотреть аналитику&nbsp;&nbsp;&#10095;</a
+        >
+      </div>
+      <div class="find-result_grid"></div>
+      <button class="find-result_show-more-button">Показать еще</button>
+    </section>
+    <section class="about-author">
+      <img
+        src="<%=require('../../images/author image-03.png')%>"
+        alt="author-image"
+        class="about-author_image"
+      />
+      <div class="about-author_description">
+        <h3 class="about-author_title">Об авторе</h3>
+        <h4 class="about-author_text">
+          Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы
+          занимаетесь, какими технологиями разработки владеете.<br />Также можно рассказать о
+          процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным
+          заказчикам. Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с
+          вами связаться.
+        </h4>
+      </div>
+    </section>
+    <footer class="footer">
+      <h4 class="footer_age">© 2023 Supersite</h4>
+      <div class="footer_links">
+        <a class="footer_link" href="./index.html">Главная</a>
+        <a class="footer_link" href="./about.html">О проекте</a>
+        <a class="footer_link" href="https://practicum.yandex.ru/" target="_blank"
+          >Яндекс.Практикум</a
+        >
+      </div>
+      <div class="footer_imgs">
+        <a href="https://github.com/" target="_blank"
+          ><img src="<%=require('../../images/github.png')%>" alt="footer-image" class="footer_img"
+        /></a>
+        <a href="https://www.facebook.com/" target="_blank"
+          ><img src="<%=require('../../images/fb.png')%>" alt="footer-image" class="footer_img"
+        /></a>
+      </div>
+    </footer>
+  </body>
+</html>

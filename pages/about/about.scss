@@ -1,5 +1,5 @@
-@import url(./normalize.scss);
-@import url(./fonts.scss);
+@import url(../../style/normalize.scss);
+@import url(../../style/fonts.scss);
 
 body {
   margin: 0 calc((100% - 1440px) / 2) 0;
@@ -247,6 +247,11 @@ body {
   }
   .github-commits {
     background-color: #f5f6f7;
+    min-width: 0;
+    padding: 0 0 80px;
+    @media (max-width: 1439px) {
+      padding: 0 0 40px;
+    }
     @media (max-width: 767px) {
       padding: 0 0 32px;
     }
@@ -300,13 +305,26 @@ body {
 
     .swiper {
       margin: 0 0 80px;
+
+      width: 100%;
+      height: 400px;
+
       .swiper-wrapper {
         .swiper-slide {
-          background-color: #ffffff;
+          background-color: white;
           border-radius: 16px;
-          width: 400px;
+          max-width: 400px;
           height: 288px;
           padding-top: 24px;
+          @media (max-width: 1439px) {
+            max-width: 336px;
+            height: 242px;
+          }
+          @media (max-width: 767px) {
+            padding-top: 16px;
+            max-width: 288px;
+            height: 264px;
+          }
           .swiper-slide_date {
             margin: 0 0 16px 24px;
             font-family: 'roboto-regular';
@@ -315,15 +333,28 @@ body {
             font-size: 14px;
             line-height: 22px;
             color: #b6bcbf;
+            @media (max-width: 767px) {
+              margin: 0 0 8px 16px;
+            }
           }
           .swiper-slide_profile {
             margin: 0 0 0 24px;
             display: flex;
             gap: 16px;
+            @media (max-width: 1439px) {
+              gap: 12px;
+            }
+            @media (max-width: 767px) {
+              margin: 0 0 0 16px;
+            }
             .swiper-slide_image {
               height: 64px;
               width: 64px;
               border-radius: 50%;
+              @media (max-width: 1439px) {
+                height: 48px;
+                width: 48px;
+              }
             }
             .swiper-slide_profile-info {
               padding-top: 4px;
@@ -335,6 +366,9 @@ body {
                 line-height: 30px;
                 color: #1a1b22;
                 margin: 0;
+                @media (max-width: 1439px) {
+                  font-size: 20px;
+                }
               }
               .swiper-slide_profile-email {
                 margin: 2px 0 0;
@@ -355,6 +389,9 @@ body {
             font-size: 16px;
             line-height: 22px;
             color: #1a1b22;
+            @media (max-width: 767px) {
+              margin: 16px 16px 0;
+            }
           }
         }
       }

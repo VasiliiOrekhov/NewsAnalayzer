@@ -16,7 +16,11 @@ const config = {
     port: 3000,
     open: true,
   },
-  entry: './js/index.js',
+  entry: {
+    index: './pages/main/index.js',
+    about: './pages/about/about.js',
+    analytics: './pages/analytics/analytics.js',
+  },
   module: {
     rules: [
       {
@@ -47,10 +51,21 @@ const config = {
     extensions: ['.js'],
   },
   plugins: [
-    new HtmlWebpackPlugin({ filename: 'index.html', template: './pages/index.html' }),
-    new HtmlWebpackPlugin({ filename: 'about.html', template: './pages/about.html' }),
-    new HtmlWebpackPlugin({ filename: 'analytics.html', template: './pages/analytics.html' }),
-
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: './pages/main/index.html',
+      chunks: ['index'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'about.html',
+      template: './pages/about/about.html',
+      chunks: ['about'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'analytics.html',
+      template: './pages/analytics/analytics.html',
+      chunks: ['analytics'],
+    }),
     new webpack.HotModuleReplacementPlugin(),
   ],
 };
